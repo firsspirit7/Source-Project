@@ -1,0 +1,20 @@
+<apex:page tabStyle="Account" standardController="Account">
+    <apex:form >
+        <apex:pageBlock title="Account Details">
+            <apex:pageBlockSection title="Account Information" collapsible="false">
+                <apex:inputField value="{!Account.Name}"/>
+                <apex:inputField value="{!Account.Type}"/>
+            </apex:pageBlockSection>
+             <apex:pageBlockSection title="Address Information">
+                <apex:inputField value="{!Account.BillingStreet}"/>
+                 <apex:inputField value="{!Account.BillingCity}"/>
+            </apex:pageBlockSection>
+             <apex:pageBlockSection title="Additional Information">
+                <apex:inputField value="{!Account.CustomerPriority__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

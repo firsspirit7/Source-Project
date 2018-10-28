@@ -1,0 +1,12 @@
+<apex:page >
+ <img id="liveagent_button_online_5736F0000000QeV" style="display: none; border: 0px none; cursor: pointer" onclick="liveagent.startChat('5736F0000000QeV')" src="https://bill105-developer-edition.ap4.force.com/resource/1531533033000/Online" /><img id="liveagent_button_offline_5736F0000000QeV" style="display: none; border: 0px none; " src="https://bill105-developer-edition.ap4.force.com/resource/1531533049000/Offline" />
+<script type="text/javascript">
+if (!window._laq) { window._laq = []; }
+window._laq.push(function(){liveagent.showWhenOnline('5736F0000000QeV', document.getElementById('liveagent_button_online_5736F0000000QeV'));
+liveagent.showWhenOffline('5736F0000000QeV', document.getElementById('liveagent_button_offline_5736F0000000QeV'));
+});</script>
+<script type='text/javascript' src='https://c.la1-c2-ukb.salesforceliveagent.com/content/g/js/43.0/deployment.js'></script>
+<script type='text/javascript'>
+liveagent.init('https://d.la1-c2-ukb.salesforceliveagent.com/chat', '5726F0000000S7d', '00D6F0000027vId');
+</script>
+</apex:page>

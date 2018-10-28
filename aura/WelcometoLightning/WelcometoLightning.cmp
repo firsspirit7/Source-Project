@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="Message" type="String" default="welcome to lightning world"/>
+	<H1>{!v.Message}</H1>
+</aura:component>

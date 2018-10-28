@@ -1,0 +1,24 @@
+<aura:component controller="ProcessSelectedRecords">
+	<aura:handler name="init" value="{!this}" action="{!c.loadComponent}"/> 
+    <aura:attribute name="oppIds" type="String" access="GLOBAL" default="" description=""/>
+    <aura:attribute name="piclistValuesList" type="String[]"/>
+    <aura:attribute name="selectedValue" type="String"/>
+    <div class="Slds">
+    	<div class="slds-grid slds-grid_vertical">
+           <div class="slds-col">
+                <lightning:select name="SelectValue" label="Select a Value:" aura:id="templateId" value="{!v.selectedValue}">
+                    <option text="None" value=""/>                    
+                    <aura:iteration items="{!v.piclistValuesList}" var="item">
+                        <option text="{!item}" value="{!item}"/>
+                    </aura:iteration> 
+                </lightning:select>
+        	</div>
+             <div class="slds-align_absolute-center " style="padding:2%;">
+        
+                    <lightning:button variant="brand" label="Update" onclick="{!c.updateSelectedOpp}" />
+                    
+                    <input type="button" value="Cancel" class="slds-button slds-button--neutral" onclick="{!c.closeDialogue}"/>
+            </div>
+            </div>
+    </div>
+</aura:component>

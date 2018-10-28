@@ -1,0 +1,21 @@
+<apex:page controller="DeleteSelectedRecords">
+    <apex:form >
+        <apex:pageBlock id="pb">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Delete" action="{!deleteSelected}" rerender="pb"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!wrapperList}" var="wrapObj">
+                <apex:column headerValue="Select">
+                    <apex:inputCheckbox value="{!wrapObj.isSelect}"/>
+                </apex:column>
+                <apex:column headerValue="Contact Name" value="{!wrapObj.contObj.Name}">
+                    
+                </apex:column>
+                <apex:column headerValue="Contact Email" value="{!wrapObj.contObj.Email}">
+                    
+                </apex:column>
+                
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
